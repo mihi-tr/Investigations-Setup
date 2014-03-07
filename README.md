@@ -53,6 +53,18 @@ ipython profile create nbserver --ipython-dir=.ipython
 python profile_setup.py
 ```
 
+### Do you need the ftpd? 
+
+This scripts come with a very simple ftpd in python - if you need it (to
+transfer files in and out:
+
+```
+cp ftpd.yaml.tmpl ftpd.yaml
+```
+
+And edit ftpd.yaml to fit your users - sorry super simple so passwords are
+plaintext. (This is a NO Security setup).
+
 ### Copy the sample procfile
 
 ```
@@ -61,7 +73,7 @@ cp Procfile.tmpl Procfile
 
 Edit the Procfile to reflect your system
 
-e.q whether you want to enable the ftpd or have the multi-user setup.
+e.q whether you want to enable the ftpd or have the multiprocessing setup.
 
 ### Start the notebook
 
