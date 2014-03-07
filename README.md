@@ -44,7 +44,7 @@ Not needed if you work with sqlite
 ### Create a nbserver profile
 
 ```
-ipython profile create nbserver
+ipython profile create nbserver --ipython-dir=.ipython
 ```
 
 ### Setup for the profile

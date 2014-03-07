@@ -13,4 +13,5 @@ if __name__=='__main__':
         data['password'] = passwd()
     with open("ipython_notebook_config.py.tmpl") as f:
         t = jinja2.Template(f.read())
-    print t.render(**data)
+    with open(".ipython/profile_nbserver/ipython_notebook_config.py", "wb") as f:
+        f.write(t.render(**data))
