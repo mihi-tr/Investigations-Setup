@@ -1,3 +1,4 @@
 Procfile
 venv
 *.ipynb
+.ipython
