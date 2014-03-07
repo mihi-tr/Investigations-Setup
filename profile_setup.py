@@ -3,5 +3,14 @@ from IPython.lib import passwd
 
 
 if __name__=='__main__':
-    p=passwd()
-    print p
+    data={}
+    r = raw_input("Make remotely accessible? (y/N): ")
+    if r.lower() == 'y':
+        data['remoteaccess'] = True
+    else:
+        data['remoteaccess'] = False
+    if data['remoteaccess']:
+        data['password'] = passwd()
+    with open("ipython_notebook_config.py.tmpl") as f:
+        t = jinja2.Template(f.read())
+    print t.render(**data)
